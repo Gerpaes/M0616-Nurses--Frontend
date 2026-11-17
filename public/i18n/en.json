@@ -1,0 +1,47 @@
+{
+  "COMMON": {
+    "APP_NAME": "AppName",
+    "LOADING": "Loading...",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "BACK": "Back",
+    "ERROR_REQUIRED": "This field is required",
+    "ERROR_EMAIL": "Enter a valid email"
+  },
+  "HEADER": {
+    "LOGO_ARIA": "Go to home",
+    "LANG_ES": "ES",
+    "LANG_EN": "EN"
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "SUBTITLE": "Welcome to AppName",
+    "CTA_LOGIN": "Log in",
+    "CTA_REGISTER": "Create account",
+    "CTA_SEARCH": "Search"
+  },
+  "LOGIN": {
+    "TITLE": "Log in",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "SUBMIT": "Log in",
+    "NO_ACCOUNT": "Don't have an account?",
+    "GO_REGISTER": "Create account"
+  },
+  "REGISTER": {
+    "TITLE": "Create account",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Repeat password",
+    "SUBMIT": "Create account",
+    "HAS_ACCOUNT": "Already have an account?",
+    "GO_LOGIN": "Log in"
+  },
+  "SEARCH": {
+    "TITLE": "Search",
+    "PLACEHOLDER": "Type to search...",
+    "SUBMIT": "Search",
+    "NO_RESULTS": "No results found"
+  }
+}
