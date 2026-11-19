@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  imports: [],
   selector: 'app-login',
-  styleUrl: './login.css',
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './login.html',
+  styleUrl: './login.css',
 })
 export class Login {}

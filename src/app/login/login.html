@@ -1,1 +1,20 @@
-<p>login works!</p>
+<h1>{{ 'LOGIN.TITLE' | translate }}</h1>
+
+<form>
+  <label>
+    {{ 'LOGIN.EMAIL' | translate }}
+    <input type="email" name="email">
+  </label>
+
+  <label>
+    {{ 'LOGIN.PASSWORD' | translate }}
+    <input type="password" name="password">
+  </label>
+
+  <button type="submit" class="btn-primary">{{ 'LOGIN.SUBMIT' | translate }}</button>
+</form>
+
+<p>
+  {{ 'LOGIN.NO_ACCOUNT' | translate }}
+  <a routerLink="/register">{{ 'LOGIN.GO_REGISTER' | translate }}</a>
+</p>
