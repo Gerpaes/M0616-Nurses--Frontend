@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  imports: [],
   selector: 'app-search',
-  styleUrl: './search.css',
+  imports: [TranslatePipe],
   templateUrl: './search.html',
+  styleUrl: './search.css',
 })
 export class Search {}
