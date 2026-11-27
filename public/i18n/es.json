@@ -52,8 +52,29 @@
   },
   "SEARCH": {
     "TITLE": "Buscar",
-    "PLACEHOLDER": "Escribe para buscar...",
+    "PLACEHOLDER": "Busca por nombre...",
     "SUBMIT": "Buscar",
-    "NO_RESULTS": "No se han encontrado resultados"
+    "NO_RESULTS": "No se han encontrado resultados",
+    "COUNT": "{{count}} resultados",
+    "COUNT_ONE": "1 resultado",
+    "EXAMPLE": "Ver ejemplo",
+    "FILTER_LABEL": "Filtrar por estado",
+    "FILTER": {
+      "all": "Todos",
+      "active": "Activo",
+      "onCall": "De guardia",
+      "off": "Libre"
+    },
+    "STATUS": {
+      "active": "Activo",
+      "onCall": "De guardia",
+      "off": "Libre"
+    },
+    "LOGIN": {
+      "TITLE": "Inicia sesión para ver más",
+      "TEXT": "Accede a perfiles completos, datos de contacto y disponibilidad.",
+      "CTA": "Iniciar sesión",
+      "NO_ACCOUNT": "¿No tienes cuenta? Créala"
+    }
   }
 }

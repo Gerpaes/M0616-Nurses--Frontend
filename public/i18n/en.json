@@ -52,8 +52,29 @@
   },
   "SEARCH": {
     "TITLE": "Search",
-    "PLACEHOLDER": "Type to search...",
+    "PLACEHOLDER": "Search by name...",
     "SUBMIT": "Search",
-    "NO_RESULTS": "No results found"
+    "NO_RESULTS": "No results found",
+    "COUNT": "{{count}} results",
+    "COUNT_ONE": "1 result",
+    "EXAMPLE": "Show example",
+    "FILTER_LABEL": "Filter by status",
+    "FILTER": {
+      "all": "All",
+      "active": "Active",
+      "onCall": "On call",
+      "off": "Off duty"
+    },
+    "STATUS": {
+      "active": "Active",
+      "onCall": "On call",
+      "off": "Off duty"
+    },
+    "LOGIN": {
+      "TITLE": "Log in to see more",
+      "TEXT": "Access full profiles, contact details and availability.",
+      "CTA": "Log in",
+      "NO_ACCOUNT": "Don't have an account? Create one"
+    }
   }
 }
