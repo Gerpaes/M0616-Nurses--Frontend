@@ -1,6 +1,6 @@
 {
   "COMMON": {
-    "APP_NAME": "NombreApp",
+    "APP_NAME": "Nexo",
     "LOADING": "Cargando...",
     "SAVE": "Guardar",
     "CANCEL": "Cancelar",
@@ -10,6 +10,12 @@
   },
   "HEADER": {
     "LOGO_ARIA": "Ir al inicio",
+    "NAV_ARIA": "Navegación principal",
+    "NAV_HOME": "Inicio",
+    "NAV_SEARCH": "Buscar enfermeros",
+    "LOGIN": "Iniciar sesión",
+    "REGISTER": "Crear cuenta",
+    "LANG_ARIA": "Idioma",
     "LANG_ES": "ES",
     "LANG_EN": "EN"
   },
