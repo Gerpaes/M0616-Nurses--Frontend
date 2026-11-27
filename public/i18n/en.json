@@ -19,13 +19,27 @@
     "LANG_ES": "ES",
     "LANG_EN": "EN"
   },
-  "HOME": {
-    "TITLE": "Home",
-    "SUBTITLE": "Welcome to AppName",
-    "CTA_LOGIN": "Log in",
-    "CTA_REGISTER": "Create account",
-    "CTA_SEARCH": "Search"
-  },
+"HOME": {
+  "TITLE_1": "Your nursing team,",
+  "TITLE_2": "always at hand.",
+  "INTRO": "Find any nurse in the hospital and see which ward they are on. Log in to manage profiles and shifts.",
+  "SEARCH_PLACEHOLDER": "Name, surname or ward",
+  "SEARCH": "Search",
+  "CARD_TAG": "Do you work at the hospital?",
+  "CARD_TITLE": "Log in to see your team and your shifts.",
+  "LOGIN": "Log in",
+  "NEW_USER": "I'm new, sign up",
+  "IMG_ALT": "Illustration of a profile card with a pulse line and three nursing team members",
+  "WITH_LOGIN": "Login required",
+  "CARD_SEARCH_TITLE": "Search nurses",
+  "CARD_SEARCH_TEXT": "Find someone by name or ward. No account needed.",
+  "CARD_SHIFTS_TITLE": "Shifts and on-call",
+  "CARD_SHIFTS_TEXT": "See who works today and cover pending on-call shifts.",
+  "CARD_PROFILES_TITLE": "Manage profiles",
+  "CARD_PROFILES_TEXT": "Add, update or remove nurses from the team.",
+  "PICKED": "You picked:",
+  "GO": "Go"
+},
   "LOGIN": {
     "TITLE": "Log in",
     "SUBTITLE": "Access your nursing workspace",

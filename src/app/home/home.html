@@ -1,6 +1,80 @@
-<h1>{{ 'HOME.TITLE' | translate }}</h1>
-<p>{{ 'HOME.SUBTITLE' | translate }}</p>
+<div class="pagina">
 
-<a routerLink="/login" class="btn-primary">{{ 'HOME.CTA_LOGIN' | translate }}</a>
-<a routerLink="/register" class="btn-primary">{{ 'HOME.CTA_REGISTER' | translate }}</a>
-<a routerLink="/search" class="btn-primary">{{ 'HOME.CTA_SEARCH' | translate }}</a>
+  
+  <section class="hero">
+
+    
+    <div class="hero-texto">
+      <h1 class="titulo-grande">
+        {{ 'HOME.TITLE_1' | translate }}<br>
+        <span class="naranja">{{ 'HOME.TITLE_2' | translate }}</span>
+      </h1>
+      <p class="intro">{{ 'HOME.INTRO' | translate }}</p>
+
+      <div class="buscador">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3E5C6B"
+          stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-4-4"></path>
+        </svg>
+        <input type="search" [placeholder]="'HOME.SEARCH_PLACEHOLDER' | translate"
+          [attr.aria-label]="'HOME.SEARCH_PLACEHOLDER' | translate">
+        <a routerLink="/search" class="btn-primary">{{ 'HOME.SEARCH' | translate }}</a>
+      </div>
+    </div>
+
+    
+    <div class="tarjeta-oscura">
+      <span class="etiqueta">{{ 'HOME.CARD_TAG' | translate }}</span>
+      <img src="img/equipo.jpg" [alt]="'HOME.IMG_ALT' | translate" class="ilustracion">
+      <h2>{{ 'HOME.CARD_TITLE' | translate }}</h2>
+      <div class="tarjeta-botones">
+        <a routerLink="/login" class="btn-primary">{{ 'HOME.LOGIN' | translate }}</a>
+        <a routerLink="/register" class="btn-secundario">{{ 'HOME.NEW_USER' | translate }}</a>
+      </div>
+    </div>
+
+  </section>
+
+  
+  <section class="tarjetas">
+    @for (tarjeta of tarjetas; track tarjeta.id) {
+      <button type="button" class="tarjeta" [class.elegida]="elegida === tarjeta"
+        [attr.aria-pressed]="elegida === tarjeta" (click)="elegir(tarjeta)">
+
+        <span class="tarjeta-cabecera">
+          <span class="icono">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F3B47"
+              stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path [attr.d]="tarjeta.icono"></path>
+            </svg>
+          </span>
+          @if (elegida === tarjeta) {
+            <span class="check" aria-hidden="true">✓</span>
+          }
+        </span>
+
+        <span class="tarjeta-titulo">
+          {{ tarjeta.titulo | translate }}
+          @if (tarjeta.conSesion) {
+            <span class="con-sesion">{{ 'HOME.WITH_LOGIN' | translate }}</span>
+          }
+        </span>
+
+        <span class="tarjeta-texto">{{ tarjeta.texto | translate }}</span>
+      </button>
+    }
+  </section>
+
+  
+  @if (elegida) {
+    <div class="elegida-barra">
+      <span>
+        {{ 'HOME.PICKED' | translate }}
+        <strong>{{ elegida.titulo | translate }}</strong>
+      </span>
+      <a [routerLink]="elegida.ruta" class="btn-primary">{{ 'HOME.GO' | translate }}</a>
+    </div>
+  }
+
+</div>
