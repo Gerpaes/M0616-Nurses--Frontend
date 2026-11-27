@@ -1,18 +1,65 @@
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;   /* logo | nav centrado | acciones */
   align-items: center;
-  padding: 20px 32px;
-  background: var(--blanco);
-  border-bottom: 1px solid var(--linea);
+  gap: 1rem;
+  margin: 1rem 1.5rem;
+  padding: .75rem 1.25rem;
+  border-radius: 999px;
+  background: var(--petroleo, #0f3d4a);
+  box-shadow: 0 6px 20px rgb(15 61 74 / .25);
 }
+
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-family: var(--font-titulos);
+  gap: .6rem;
+  justify-self: start;
+  font-family: var(--font-titulos, inherit);
   font-weight: 800;
+  font-size: 1.4rem;
   letter-spacing: -0.035em;
-  font-size: 24px;
-  color: var(--petroleo);
+  color: #fff;
   text-decoration: none;
+}
+
+.nav { display: flex; gap: 1.75rem; }
+.nav a {
+  color: rgb(255 255 255 / .75);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: .25rem 0;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover { color: #fff; }
+.nav a.active { color: #fff; font-weight: 700; border-bottom-color: var(--turquesa, #5cc3ce); }
+
+.actions { display: flex; align-items: center; gap: .6rem; justify-self: end; }
+
+.lang { display: flex; gap: .25rem; margin-right: .5rem; }
+.lang button {
+  background: none; border: 0; cursor: pointer;
+  color: rgb(255 255 255 / .75); font: inherit; font-size: .85rem; font-weight: 700;
+}
+.lang button:hover { color: #fff; }
+
+.btn {
+  padding: .6rem 1.2rem;
+  border-radius: 999px;
+  font-size: .95rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn--ghost { background: rgb(255 255 255 / .12); color: #fff; }
+.btn--ghost:hover { background: rgb(255 255 255 / .2); }
+.btn--cta { background: var(--naranja, #f28c38); color: #fff; }
+.btn--cta:hover { filter: brightness(1.08); }
+
+a:focus-visible, button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; border-radius: 6px; }
+
+@media (max-width: 800px) {
+  .header { grid-template-columns: 1fr; border-radius: 28px; justify-items: center; }
+  .logo, .actions { justify-self: center; }
+  .nav { gap: 1.25rem; }
 }
