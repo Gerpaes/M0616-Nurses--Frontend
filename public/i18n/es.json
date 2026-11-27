@@ -67,13 +67,23 @@
   },
   "REGISTER": {
     "TITLE": "Crear cuenta",
+    "ICON_LABEL": "Icono de enfermería",
     "NAME": "Nombre",
     "EMAIL": "Correo electrónico",
     "PASSWORD": "Contraseña",
     "CONFIRM_PASSWORD": "Repetir contraseña",
+    "SHOW_PASSWORD": "Mostrar",
+    "HIDE_PASSWORD": "Ocultar",
     "SUBMIT": "Crear cuenta",
+    "ERRORS_TITLE": "Revisa los siguientes campos:",
+    "ERR_NAME": "El nombre es obligatorio",
+    "ERR_EMAIL": "Introduce un correo válido",
+    "ERR_PASSWORD": "La contraseña debe tener al menos {{min}} caracteres",
+    "ERR_CONFIRM": "Las contraseñas no coinciden",
+    "SUCCESS": "¡Cuenta creada correctamente! (simulación, sin conexión a backend)",
     "HAS_ACCOUNT": "¿Ya tienes cuenta?",
-    "GO_LOGIN": "Iniciar sesión"
+    "GO_LOGIN": "Iniciar sesión",
+    "BACK_HOME": "Volver al inicio"
   },
   "SEARCH": {
     "TITLE": "Buscar",

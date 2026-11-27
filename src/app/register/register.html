@@ -1,30 +1,49 @@
-<h1>{{ 'REGISTER.TITLE' | translate }}</h1>
+<main class="register">
+  <div class="card">
+    <svg class="icon" width="56" height="56" viewBox="0 0 48 48" role="img"
+      [attr.aria-label]="'REGISTER.ICON_LABEL' | translate" focusable="false">
+      <circle cx="24" cy="24" r="23" fill="#E3F5F7"></circle>
+      <path d="M24 12v24M12 24h24" stroke="#0B6E73" stroke-width="5" stroke-linecap="round"></path>
+    </svg>
 
-<form>
-  <label>
-    {{ 'REGISTER.NAME' | translate }}
-    <input type="text" name="name">
-  </label>
+    <h1>{{ 'REGISTER.TITLE' | translate }}</h1>
 
-  <label>
-    {{ 'REGISTER.EMAIL' | translate }}
-    <input type="email" name="email">
-  </label>
+    @if (submitted()) {
+    <p class="success" role="status">{{ 'REGISTER.SUCCESS' | translate }}</p>
+    } @else {
+    <form (ngSubmit)="onSubmit()" novalidate>
+      @for (f of fields; track f.key) {
+      <label class="field">
+        {{ f.label | translate }}
+        <input [type]="f.secret && showPassword() ? 'text' : f.type" [name]="f.key" [value]="values()[f.key]"
+          (input)="setValue(f.key, $event)" />
+      </label>
+      }
 
-  <label>
-    {{ 'REGISTER.PASSWORD' | translate }}
-    <input type="password" name="password">
-  </label>
+      <button type="button" class="link-btn" (click)="togglePassword()">
+        {{ (showPassword() ? 'REGISTER.HIDE_PASSWORD' : 'REGISTER.SHOW_PASSWORD') | translate }}
+      </button>
 
-  <label>
-    {{ 'REGISTER.CONFIRM_PASSWORD' | translate }}
-    <input type="password" name="confirmPassword">
-  </label>
+      @if (errors().length) {
+      <div class="errors" role="alert">
+        <p>{{ 'REGISTER.ERRORS_TITLE' | translate }}</p>
+        <ul>
+          @for (e of errors(); track e.key) {
+          <li>{{ e.key | translate: e.params }}</li>
+          }
+        </ul>
+      </div>
+      }
 
-  <button type="submit" class="btn-primary">{{ 'REGISTER.SUBMIT' | translate }}</button>
-</form>
+      <button type="submit" class="btn-primary">{{ 'REGISTER.SUBMIT' | translate }}</button>
+    </form>
+    }
 
-<p>
-  {{ 'REGISTER.HAS_ACCOUNT' | translate }}
-  <a routerLink="/login">{{ 'REGISTER.GO_LOGIN' | translate }}</a>
-</p>
+    <p>
+      {{ 'REGISTER.HAS_ACCOUNT' | translate }}
+      <a routerLink="/login">{{ 'REGISTER.GO_LOGIN' | translate }}</a>
+    </p>
+
+    <a routerLink="/" class="btn-primary back">{{ 'REGISTER.BACK_HOME' | translate }}</a>
+  </div>
+</main>

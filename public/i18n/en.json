@@ -62,13 +62,23 @@
   },
   "REGISTER": {
     "TITLE": "Create account",
+    "ICON_LABEL": "Nursing icon",
     "NAME": "Name",
     "EMAIL": "Email",
     "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Repeat password",
+    "SHOW_PASSWORD": "Show",
+    "HIDE_PASSWORD": "Hide",
     "SUBMIT": "Create account",
+    "ERRORS_TITLE": "Please check the following fields:",
+    "ERR_NAME": "Name is required",
+    "ERR_EMAIL": "Enter a valid email",
+    "ERR_PASSWORD": "Password must be at least {{min}} characters long",
+    "ERR_CONFIRM": "Passwords do not match",
+    "SUCCESS": "Account created successfully! (mock, no backend connection)",
     "HAS_ACCOUNT": "Already have an account?",
-    "GO_LOGIN": "Log in"
+    "GO_LOGIN": "Log in",
+    "BACK_HOME": "Back to home"
   },
   "SEARCH": {
     "TITLE": "Search",
