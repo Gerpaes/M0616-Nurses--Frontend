@@ -17,20 +17,10 @@
 }
 
 .login-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 16px;
-}
-
-.login-icon circle {
-    fill: var(--bruma);
-}
-
-.login-icon path {
-    fill: none;
-    stroke: var(--teal);
-    stroke-width: 6;
-    stroke-linecap: round;
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
 }
 
 .login-card h1 {
